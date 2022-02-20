@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" display="none" aria-hidden="true" width="0" height="0" hidden>
+      <defs>
+        <symbol id="sprite-close" viewBox="0 0 24 24">
+          <title>Remove chip</title>
+          <path d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"/>
+        </symbol>
+      </defs>
+    </svg>
+    <div class="file_container" js-file-manager>
+        <div class="file-input">
+            <form action="">
+                <label class="file-input__real" hidden aria-hidden="true">
+                    <input type="file" id="applications" js-real-file-input>
+                </label>
+            </form>
+            <div class="file-input__input input input__container">
+                <span class="input__left">
+                  <button type="button" class="input__choose" js-fake-file-input>Choose File</button>
+                  <span class="input__no-file" js-no-file>No file chosen</span>
+                </span>
+                <span class="input__files chip__container" js-chip-container></span>
+                <button type="button" class="input__remove" hidden js-remove-files>
+                  <svg><use xlink:href="#sprite-close"></use></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script  src="./script.js"></script>
+</body>
+</html>
